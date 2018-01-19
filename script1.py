@@ -27,24 +27,20 @@ plt.imshow(A, cmap = plt.get_cmap('gray'))
 plt.show()
 
 # represent the jpeg image(before apply gray scale function) as a 256 by 256 matrix
-# answer of Q1c
 A = imresize(A, [256, 256], interp = 'bicubic')
 
 # Apply the rgb2gray function to the jpeg image
 A = rgb2gray(A)
 
 # show the jpeg image in a figure
-# answer of Q1b
 plt.imshow(A, cmap = plt.get_cmap('gray'))
 plt.show()
 
 # resize the gray scale jpeg image in a 256 by 256 matrix
-# answer of Q2
 A = imresize(A, [256, 256], interp = 'bicubic')
 print(A)
 
 # show the resize jpeg image
-# answer of Q4
 plt.imshow(A, interpolation='nearest')
 plt.show()
 
@@ -63,7 +59,6 @@ plt.show()
 inverseB = T.T*P.T*B*P*T
 
 # show the image after the inverse 2D Haar transform of B
-# answer of Q3(2)
 plt.imshow(inverseB, interpolation='nearest')
 plt.show()
 
