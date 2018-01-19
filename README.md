@@ -10,13 +10,13 @@ from pywt import wavedec
 import math
 # define a function to covert the image to a gray scale image
 def rgb2gray(rgb):
-return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])
+  return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])
 # define a function to get the proper Haar matrix and permutation matrix
 def GetHaarMatrices(N):
-Q = np.matrix("[1,1;1,-1]")
-M = int(N/2)
-T = np.kron(matlib.eye(M),Q)/np.sqrt(2)
-P = np.vstack((matlib.eye(N)[::2,:],matlib.eye(N)[1::2,:]))
+  Q = np.matrix("[1,1;1,-1]")
+  M = int(N/2)
+  T = np.kron(matlib.eye(M),Q)/np.sqrt(2)
+  P = np.vstack((matlib.eye(N)[::2,:],matlib.eye(N)[1::2,:]))
 return T,P
 # reads in a jpeg image
 A = imread('image.jpg')
